@@ -151,4 +151,4 @@ scripts/目录有相应的脚本可以调用
 
 ## 关键步骤
 
-FAQs： <https://github.com/zhayujie/chatgpt-on-wechat/wiki/FAQs>
+FAQs： <https://github.com/shuodehaoa/chatgpt-on-wechat/wiki/关键步骤>
