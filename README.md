@@ -1,6 +1,6 @@
 # 简介
 
-> ChatGPT近期以强大的对话和信息整合能力风靡全网，可以写代码、改论文、讲故事，几乎无所不能，这让人不禁有个大胆的想法，能否用他的对话模型把我们的微信打造成一个智能机器人，可以在与好友对话中给出意想不到的回应，而且再也不用担心女朋友影响我们 ~~打游戏~~ 工作了。
+> 微信中接入openai的chatgpt3.5接口，实现微信消息自动回复，也可以作为一个机器人来训练。
 
  
 基于ChatGPT的微信聊天机器人，通过 [ChatGPT](https://github.com/openai/openai-python) 接口生成对话内容，使用 [itchat](https://github.com/littlecodersh/ItChat) 实现微信消息的接收和自动回复。已实现的特性如下：
@@ -30,20 +30,6 @@
 >**2022.12.18：** 支持根据描述生成图片并发送，openai版本需大于0.25.0
 
 >**2022.12.17：** 原来的方案是从 [ChatGPT页面](https://chat.openai.com/chat) 获取session_token，使用 [revChatGPT](https://github.com/acheong08/ChatGPT) 直接访问web接口，但随着ChatGPT接入Cloudflare人机验证，这一方案难以在服务器顺利运行。 所以目前使用的方案是调用 OpenAI 官方提供的 [API](https://beta.openai.com/docs/api-reference/introduction)，回复质量上基本接近于ChatGPT的内容，劣势是暂不支持有上下文记忆的对话，优势是稳定性和响应速度较好。
-
-# 使用效果
-
-### 个人聊天
-
-![single-chat-sample.jpg](docs/images/single-chat-sample.jpg)
-
-### 群组聊天
-
-![group-chat-sample.jpg](docs/images/group-chat-sample.jpg)
-
-### 图片生成
-
-![group-chat-sample.jpg](docs/images/image-create-sample.jpg)
 
 
 # 快速开始
@@ -163,14 +149,6 @@ scripts/目录有相应的脚本可以调用
 
 参考文档 [Docker部署](https://github.com/limccn/chatgpt-on-wechat/wiki/Docker%E9%83%A8%E7%BD%B2)   (Contributed by [limccn](https://github.com/limccn))。
 
-
-## 常见问题
+## 关键步骤
 
 FAQs： <https://github.com/zhayujie/chatgpt-on-wechat/wiki/FAQs>
-
-
-## 联系
-
-欢迎提交PR、Issues，以及Star支持一下。程序运行遇到问题优先查看 [常见问题列表](https://github.com/zhayujie/chatgpt-on-wechat/wiki/FAQs) ，其次前往 [Issues](https://github.com/zhayujie/chatgpt-on-wechat/issues) 中搜索，若无相似问题可创建Issue，或加微信 eijuyahz 交流。
-
- 
